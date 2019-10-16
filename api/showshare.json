@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Massing",
+      "genre": "Pop/Rock",
+      "password": "werband",
+      "email": "dummie@d.com"
+    },
+    {
+      "name": "Homesick",
+      "password": "werheavy",
+      "email": "homesick@b.com",
+      "id": 2
+    },
+    {
+      "name": "seav",
+      "password": "e",
+      "email": "e@e.com",
+      "id": 3
+    }
+  ]
+}
