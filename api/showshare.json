@@ -18,6 +18,56 @@
       "password": "e",
       "email": "e@e.com",
       "id": 3
+    },
+    {
+      "name": "Massing",
+      "breed": "Pop/Rock",
+      "userId": null,
+      "id": 4
+    },
+    {
+      "name": "y",
+      "genre": "t",
+      "userId": null,
+      "id": 5
+    },
+    {
+      "name": "Massing",
+      "genre": "Pop/Rock",
+      "userId": null,
+      "id": 6
+    },
+    {
+      "name": "tst",
+      "breed": "tst",
+      "userId": null,
+      "id": 7
+    },
+    {
+      "name": "qefqefq",
+      "breed": "qefqef",
+      "userId": null,
+      "id": 8
+    }
+  ],
+  "shows": [
+    {
+      "name": "show 1",
+      "date": "10120203",
+      "description": "flwlef",
+      "id": 2
+    },
+    {
+      "name": "wrgknwrg",
+      "date": "ergljnwrgl",
+      "description": "rgwlrgjnwrg",
+      "id": 3
+    },
+    {
+      "name": "yo",
+      "date": "waf",
+      "description": "f",
+      "id": 4
     }
   ]
 }
