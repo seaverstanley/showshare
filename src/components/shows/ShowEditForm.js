@@ -69,8 +69,6 @@ class ShowEditForm extends Component {
                 id="firstAct"
                 placeholder="First Act"
               />
-
-
               <label htmlFor="date">Date</label>
               <input
                 type="date"
@@ -98,7 +96,6 @@ class ShowEditForm extends Component {
                 Submit
               </button>
             </div>
-
           </fieldset>
         </form>
       </>

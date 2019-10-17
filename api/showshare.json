@@ -1,25 +1,41 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "Massing",
-      "genre": "Pop/Rock",
-      "password": "werband",
-      "email": "dummie@d.com"
-    },
-    {
-      "name": "Homesick",
-      "password": "werheavy",
-      "email": "homesick@b.com",
-      "id": 2
-    },
-    {
       "name": "seav",
       "password": "e",
       "email": "e@e.com",
       "id": 3
+    }
+  ],
+  "shows": [
+    {
+      "id": 1,
+      "name": "1",
+      "date": "5",
+      "bandOne": "3",
+      "bandTwo": "2",
+      "bandThree": "4",
+      "venue": "6"
     },
     {
+      "name": "njfbghkdrft",
+      "date": "r",
+      "bandOne": "r",
+      "bandTwo": "r",
+      "bandThree": "r",
+      "id": 2
+    },
+    {
+      "name": "show",
+      "date": "tomorrow",
+      "bandOne": "band1",
+      "bandTwo": "band2",
+      "bandThree": "band3",
+      "venue": "v",
+      "id": 3
+    },
+    {
+<<<<<<< HEAD
       "name": "Massing",
       "breed": "Pop/Rock",
       "userId": null,
@@ -70,6 +86,14 @@
       "act":"act",
       "date": "waf",
       "description": "f",
+=======
+      "name": "1",
+      "date": "5",
+      "bandOne": "2",
+      "bandTwo": "3",
+      "bandThree": "4",
+      "venue": "6",
+>>>>>>> bf4fa75835b55f93374d6a2dfc1811208a1cd998
       "id": 4
     }
   ]

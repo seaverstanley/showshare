@@ -1,7 +1,6 @@
 import { Route } from 'react-router-dom'
 import React, { Component ,Redirect } from 'react'
 import Home from './home/Home'
-import LocalActs from './localacts/LocalActs'
 import Venues from './venues/Venues'
 import About from './about/About'
 import Login from './auth/Login'
@@ -26,9 +25,6 @@ class ApplicationViews extends Component {
         <Route exact path="/home" render={(props) => {
           return <Home />
         }} />
-        <Route exact path ="/localacts" render={(props) => {
-            return <LocalActs />
-        }}/>
          <Route exact path ="/venues" render={(props) => {
             return <Venues />
         }}/>
