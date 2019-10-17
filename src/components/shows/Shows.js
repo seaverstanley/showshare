@@ -1,17 +1,18 @@
-import React, { Component } from "react";
-//import the components we will need
-import ShowCard from "./ShowCard";
-import ShowManager from "../../modules/ShowManager";
 
-class AnimalList extends Component {
+import React, { Component } from 'react'
+import { Link } from "react-router-dom"
+import ShowCard from './ShowCard'
+import ShowManager from '../../modules/ShowManager'
+
+class ShowList extends Component {
   //define what this component needs to render
   state = {
     shows: []
   };
 
   componentDidMount() {
-    console.log("ANIMAL LIST: ComponentDidMount");
-    //getAll from ShowManager and hang on to that data; put it in state
+    console.log("SHOW LIST: ComponentDidMount");
+    //getAll from AnimalManager and hang on to that data; put it in state
     ShowManager.getAll().then(showsFromDatabase => {
       console.log(showsFromDatabase);
       this.setState({
@@ -21,24 +22,16 @@ class AnimalList extends Component {
   }
 
   render() {
-    console.log("SHOW LIST: Render");
+    console.log("SHOW  LIST: Render");
 
     return (
       <>
         <section className="section-content">
-          <button
-            type="button"
-            className="btn"
-            onClick={() => {
-              this.props.history.push("/shows/new");
-            }}
-          >
-            New Show!
-          </button>
+        <Link to={`/NewShow`}><button className="btn btn-success">Add A Show!</button></Link>
         </section>
         <div className="container-cards">
           {this.state.shows.map(singleShow => (
-            <ShowCard key={singleShow.name} showProp={singleShow} />
+            <ShowCard key={singleShow.id} showProp={singleShow} />
           ))}
         </div>
       </>
@@ -46,4 +39,4 @@ class AnimalList extends Component {
   }
 }
 
-export default AnimalList;
+export default ShowList

@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom'
-import React, { Component } from 'react'
+import React, { Component ,Redirect } from 'react'
 import Home from './home/Home'
 import LocalActs from './localacts/LocalActs'
 import Venues from './venues/Venues'
@@ -11,6 +11,8 @@ import RegisterCard from './auth/RegisterCard';
 import Register from './auth/Register'
 import Shows from './shows/Shows'
 import ShowCard from './shows/ShowCard'
+import NewShowCard from './shows/NewShowCard'
+
 
 
 
@@ -42,6 +44,16 @@ class ApplicationViews extends Component {
            <Route exact path ="/shows" render={(props) =>{
             return <Shows />
         }}/>
+            <Route
+          path="/NewShow"
+          render={props => {
+            return this.isAuthenticated() ? (
+              <NewShowCard {...props} />
+            ) : (
+              <Redirect to="/shows" />
+            );
+          }}
+        />
          <Route
           exact
           path="/auth/LoginCard"

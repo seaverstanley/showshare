@@ -53,18 +53,21 @@
   "shows": [
     {
       "name": "show 1",
+      "act":"Massing",
       "date": "10120203",
       "description": "flwlef",
       "id": 2
     },
     {
       "name": "wrgknwrg",
+      "act":"band",
       "date": "ergljnwrgl",
       "description": "rgwlrgjnwrg",
       "id": 3
     },
     {
       "name": "yo",
+      "act":"act",
       "date": "waf",
       "description": "f",
       "id": 4
