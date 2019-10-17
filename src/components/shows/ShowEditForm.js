@@ -1,51 +1,57 @@
-
 import React, { Component } from "react";
 import ShowManager from "../../modules/ShowManager";
+import show from './NewShowCard'
+// import "./AnimalForm.css"
 
-
-class ShowCard extends Component {
+class ShowEditForm extends Component {
+  //set the initial state
   state = {
-    showName: "",
-    actOne:'',
-    actTwo:'',
-    actThree:'',
+    name: "",
     date: "",
-    venue:'',
-    loadingStatus: false,
+    actOne:"",
+    actTwo:"",
+    actThree:'',
+    venue: "",
+    loadingStatus: true,
   };
 
   handleFieldChange = evt => {
-    console.log("this is event.target.id", evt.target.id);
-    console.log("this is event.target.value", evt.target.value);
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
-    console.log("this is state to change", stateToChange);
     this.setState(stateToChange);
   };
 
-  /*  Local method for validation, set loadingStatus, create animal      object, invoke the ShowManager post method, and redirect to the full animal list
-   */
-  constructNewShow = evt => {
+  updateExistingShow = evt => {
     evt.preventDefault();
-    if (this.state.showName=== "" || this.state.date === "") {
-      window.alert("Please input all the show info");
-    } else {
-      this.setState({ loadingStatus: true });
-      const show = {
-        name: this.state.showName,
-        date: this.state.date,
-        bandOne: this.state.firstAct,
-        bandTwo: this.state.secondAct,
-        bandThree: this.state.thirdAct,
-        venue: this.state.venue,
-      };
+    this.setState({ loadingStatus: true });
+    const editedShow = {
+      id: this.props.match.params.showId,
+      name: this.state.showName,
+      date: this.state.date,
+      bandOne: this.state.firstAct,
+      bandTwo: this.state.secondAct,
+      bandThree: this.state.thirdAct,
+      venue: this.state.venue,
+    };
 
-      // Create the animal and redirect user to animal list
-      ShowManager.post(show).then(() =>
-        this.props.history.push("/shows")
-      );
-    }
+    ShowManager.update(editedShow).then(() =>
+      this.props.history.push("shows")
+    );
   };
+
+  componentDidMount() {
+    ShowManager.getOne(this.props.match.params.showId).then(shows => {
+        this.setState({
+          showName: show.name,
+          date: show.date,
+          actOne: show.bandOne,
+          actTwo: show.bandTwo,
+          actThree: show.bandThree,
+          venue: show.Venue,
+          loadingStatus: false,
+        });
+    });
+  }
 
   render() {
     return (
@@ -108,7 +114,7 @@ class ShowCard extends Component {
               <button
                 type="button"
                 disabled={this.state.loadingStatus}
-                onClick={this.constructNewShow}
+                onClick={this.updateExistingShow}
               >
                 Submit
               </button>
@@ -120,4 +126,4 @@ class ShowCard extends Component {
   }
 }
 
-export default ShowCard
+export default ShowEditForm

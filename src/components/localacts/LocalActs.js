@@ -1,13 +1,17 @@
+
+
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+
+
+
 class LocalActs extends Component {
   render() {
     return (
       <address>
-        This is the Local Acts page for ShowShare, this is where you will see a list of all the local bands!
+        This is the local acts for ShowShare!
         <br />Come To Huntington!
-        <Link to={`/auth/ActCard`}><button className="btn btn-success">Add An Act!</button></Link>
-      </address>
+        <br></br>
+        </address>
     )
   }
 }
