@@ -11,7 +11,7 @@ export default {
     }).then(showshare => showshare.json());
   },
   getAll() {
-    return fetch(`${remoteURL}/shows`).then(result => result.json());
+    return fetch(`http://localhost:5002/shows?_expand=venue&_expand=act`).then(result => result.json());
   },
   getOne(id) {
     return fetch(`${remoteURL}/shows/${id}/`).then(result => result.json());
@@ -24,4 +24,12 @@ export default {
       },
       body: JSON.stringify(editedShow)
     }).then(data => data.json());
-  }}
+  },
+  delete(id) {
+    return fetch(`${remoteURL}/tasks/${id}`, {
+      method: "DELETE"
+    })
+    .then (()=> fetch(`${remoteURL}/tasks`))
+    .then(result => result.json());
+  },
+}

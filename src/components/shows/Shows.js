@@ -1,4 +1,5 @@
 
+
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import ShowCard from './ShowCard'
@@ -9,6 +10,8 @@ class ShowList extends Component {
   state = {
     shows: []
   };
+
+  
 
   componentDidMount() {
     console.log("SHOW LIST: ComponentDidMount");

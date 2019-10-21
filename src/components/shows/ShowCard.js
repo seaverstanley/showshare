@@ -1,27 +1,59 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import ShowManager from "../../modules/ShowManager"
+// import ShowManager from "../../modules/ShowManager";
 
-class AnimalCard extends Component {
+
+class ShowCard extends Component
+
+
+{
+
+    // deleteShowProp = (id) => {
+    //     ShowManager.delete(id)
+    //       .then(ShowManager.getAll)
+    //       .then(parsedShows => {
+    //           this.setState({
+    //               tasks: parsedShows
+
+    //           })
+    //           })
+    //           .then(()=>
+    //         this.props.history.push("/shows")
+    //           )}
+
+
   render() {
     return (
       <div className="card">
         <div className="card-content">
 
           <h3>
-            Name: {this.props.showProp.name}
+             {this.props.showProp.name}
           </h3>
+          <h4>Act: {this.props.showProp.act.name}</h4>
+          <h4>Venue: {this.props.showProp.venue.name}</h4>
           <p>Date: {this.props.showProp.date}</p>
 
-          <Link to={`/shows/${this.props.showProp.id}`}>
-            <button>Details</button>
-          </Link>
+
           <Link to={`/shows/${this.props.showProp.id}/edit`}>
-            <button>Edit</button>
+            <button className="btn btn-success">Edit</button>
           </Link>
+          <Link to="/shows" refresh ="true">
+          <button type="checkbox" className ="btn btn-danger"
+            onClick={() => this.props.deleteShowProp(this.props.showProp.id)}
+          >
+            Delete Show?
+          </button>
+          </Link>
+
         </div>
       </div>
     );
   }
+
+
+
 }
 
-export default AnimalCard;
+export default ShowCard;

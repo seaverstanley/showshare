@@ -19,6 +19,8 @@ import NewShowCard from './shows/NewShowCard'
 
 class ApplicationViews extends Component {
 
+  isAuthenticated = () => localStorage.getItem("credentials") !== null;
+
   render() {
     return (
       <React.Fragment>

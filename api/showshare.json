@@ -7,94 +7,67 @@
       "id": 3
     }
   ],
-  "shows": [
-    {
-      "id": 1,
-      "name": "1",
-      "date": "5",
-      "bandOne": "3",
-      "bandTwo": "2",
-      "bandThree": "4",
-      "venue": "6"
-    },
-    {
-      "name": "njfbghkdrft",
-      "date": "r",
-      "bandOne": "r",
-      "bandTwo": "r",
-      "bandThree": "r",
-      "id": 2
-    },
-    {
-      "name": "show",
-      "date": "tomorrow",
-      "bandOne": "band1",
-      "bandTwo": "band2",
-      "bandThree": "band3",
-      "venue": "v",
-      "id": 3
-    },
-    {
-<<<<<<< HEAD
-      "name": "Massing",
-      "breed": "Pop/Rock",
-      "userId": null,
-      "id": 4
-    },
-    {
-      "name": "y",
-      "genre": "t",
-      "userId": null,
-      "id": 5
-    },
+  "acts": [
     {
       "name": "Massing",
       "genre": "Pop/Rock",
-      "userId": null,
-      "id": 6
+      "id": 1,
+      "actId": 1
     },
     {
-      "name": "tst",
-      "breed": "tst",
-      "userId": null,
-      "id": 7
+      "name": "Homesick",
+      "genre": "Heavy Rock",
+      "id": 2,
+      "actId": 2
     },
     {
-      "name": "qefqefq",
-      "breed": "qefqef",
-      "userId": null,
-      "id": 8
+      "name": "Youth",
+      "genre": "Prog Rock",
+      "id": 3,
+      "actId": 3
+    }
+  ],
+  "venues": [
+    {
+      "name": "The V-Club",
+      "location": "",
+      "id": 1,
+      "venueId": 1
+    },
+    {
+      "name": "The Boulevard Tavern",
+      "location": "",
+      "id": 2,
+      "venueId": 2
+    },
+    {
+      "name": "The Blue Parrot",
+      "location": "",
+      "id": 3,
+      "venueId": 3
     }
   ],
   "shows": [
     {
-      "name": "show 1",
-      "act":"Massing",
-      "date": "10120203",
-      "description": "flwlef",
-      "id": 2
+      "name": "test 34",
+      "date": "2019-10-21",
+      "actId": 2,
+      "venueId": 2,
+      "id": 7
     },
     {
-      "name": "wrgknwrg",
-      "act":"band",
-      "date": "ergljnwrgl",
-      "description": "rgwlrgjnwrg",
-      "id": 3
+      "name": "The First Actual Working Post!",
+      "date": "2019-10-21",
+      "actId": 3,
+      "venueId": 3,
+      "id": 8
     },
     {
-      "name": "yo",
-      "act":"act",
-      "date": "waf",
-      "description": "f",
-=======
-      "name": "1",
-      "date": "5",
-      "bandOne": "2",
-      "bandTwo": "3",
-      "bandThree": "4",
-      "venue": "6",
->>>>>>> bf4fa75835b55f93374d6a2dfc1811208a1cd998
-      "id": 4
+      "name": "Another Test To Make Sure It Works!",
+      "date": "2019-10-21",
+      "actId": 2,
+      "venueId": 2,
+      "id": 9
     }
   ]
 }

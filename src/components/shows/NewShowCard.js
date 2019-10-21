@@ -1,126 +1,148 @@
+import React, { Component } from "react";
+import ShowManager from "../../modules/ShowManager";
+import ActManager from '../../modules/ActManager'
+import VenueManager from '../../modules/VenueManager'
+import 'react-dropdown/style.css'
 
 
-// import React, { Component } from "react";
-// import ShowManager from "../../modules/ShowManager"
-// import ActManager from '../../modules/ActManager'
+class ShowForm extends Component {
+    state = {
+        showName: "",
+        date: "",
+        acts: [],
+        actId: "1",
+        venues: [],
+        venueId: "1",
+        loadingStatus: false
+    };
 
-// class NewShowCard extends Component {
-//   state = {
-//     showName: "",
-//     actOne: '',
-//     date: "",
-//     venue:'',
-//     loadingStatus: false,
-//   };
+    handleFieldChange = evt => {
+        console.log("this is event.target.id", evt.target.id);
+        console.log("this is event.target.value", evt.target.value);
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        console.log("this is state to change", stateToChange);
+        this.setState(stateToChange);
+    };
+    componentDidMount() {
+        // Get all acts and venues from db
+        ActManager.getAll().then(parsedActs => {
+            console.log("these should be all acts from db", parsedActs)
+            // Take acts from db and set them to state
+            this.setState({ acts: parsedActs })
 
-//   handleFieldChange = evt => {
-//     console.log("this is event.target.id", evt.target.id);
-//     console.log("this is event.target.value", evt.target.value);
-//     const stateToChange = {};
-//     stateToChange[evt.target.id] = evt.target.value;
-//     console.log("this is state to change", stateToChange);
-//     this.setState(stateToChange);
-//   };
 
-//   // this is so we can get all the bands
+            // Get all acts and venues from db
+            VenueManager.getAll().then(parsedVenues => {
+                console.log("these should be all Venues from db", parsedVenues)
+                // Take Venues from db and set them to state
+                this.setState({ venues: parsedVenues })
+            })
 
-//   componentDidMount() {
-//     console.log("ACT LIST: ComponentDidMount");
-// //  grab everything from the manager
-//     ActManager.getAll().then(actsFromDatabase => {
-//       console.log(actsFromDatabase);
-//       this.setState({
-//         acts: actsFromDatabase
-//       });
-//     });
-//   }
 
-//   /*  Local method for validation, set loadingStatus, create animal      object, invoke the ShowManager post method, and redirect to the full animal list
-//    */
-//   constructNewShow = evt => {
-//     evt.preventDefault();
-//     if (this.state.showName=== "" || this.state.date === "") {
-//       window.alert("Please input all the show info");
-//     } else {
-//       this.setState({ loadingStatus: true });
-//       const show = {
-//         name: this.state.showName,
-//         date: this.state.date,
-//         bandOne: this.state.firstAct,
-//         venue: this.state.venue,
-//       };
+        })
 
-//       // Create the animal and redirect user to animal list
-//       ShowManager.post(show).then(() =>
-//         this.props.history.push("/shows")
-//       );
-//     }
-//   };
+    }
 
-//   render() {
-//     return (
-//       <>
-//         <form>
-//           <fieldset>
-//             <div className="formgrid">
-//               <label htmlFor="showName">Name</label>
-//               <input
-//                 type="text"
-//                 required
-//                 onChange={this.handleFieldChange}
-//                 id="showName"
-//                 placeholder="Show name"
-//               />
-//               {/* here is the dropdown for acts/bands */}
-//               <select
-//                 className="form-control"
-//                 id="actId"
-//                 value={this.state.actId}
-//                 onChange={this.handleFieldChange}
-//               >
-//                 {/* {this.state.acts.map(act => (
-//                   <option
-//                     key={act.id.actName}
-//                     value={act.id.actName}
-//                   >
-//                     {act.actName}
-//                   </option>
-//                 ))} */}
-//               </select>
 
-//               {/* here is the dropdown for date */}
-//               <label htmlFor="date">Date</label>
-//               <input
-//                 type="date"
-//                 required
-//                 onChange={this.handleFieldChange}
-//                 id="date"
-//                 placeholder="Date"
-//               />
-//               <label htmlFor="venue">Venue</label>
-//                  <select
-//                 type="select"
-//                 required
-//                 onChange={this.handleFieldChange}
-//                 id="venue"
-//                 placeholder="Venue"
-//               />
 
-//             </div>
-//             <div className="alignRight">
-//               <button
-//                 type="button"
-//                 disabled={this.state.loadingStatus}
-//                 onClick={this.constructNewShow}
-//               >
-//                 Submit
-//               </button>
-//             </div>
-//           </fieldset>
-//         </form>
-//       </>
-//     );
-//   }
-// }
+    /*  Local method for validation, set loadingStatus, create show     object, invoke the ShowManager post method, and redirect to the full animal list
+     */
+    constructNewShow = evt => {
+        evt.preventDefault();
+        if (this.state.showName === "" || this.state.date === "") {
+            window.alert("Please input a show name and date");
+        } else {
+            this.setState({ loadingStatus: true });
+            const show = {
+                name: this.state.showName,
+                date: this.state.date,
+                actId: +this.state.actId,
+                venueId: +this.state.venueId, // convert to number
+            };
 
-// export default NewShowCard
+            // Create the show and redirect user to show list
+            ShowManager.post(show).then(() =>
+                this.props.history.push("/shows")
+            );
+        }
+    };
+
+
+
+    render() {
+        return (
+            <>
+                <form>
+                    <fieldset>
+                        <div className="formgrid">
+                            <label htmlFor="showName">Show Name</label>
+                            <br></br>
+                            <input
+                                type="text"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="showName"
+                                placeholder="show name"
+
+                            />
+                            <br></br>
+                            <label>Acts</label>
+                            <select
+                                className="form-control"
+                                id="actId"
+                                value={this.state.actId}
+                                onChange={this.handleFieldChange}
+                            >
+                                {this.state.acts.map(act => (
+                                    <option key={act.id} value={act.id}>
+                                        {act.name}
+                                    </option>
+                                ))}
+                            </select>
+                            <br></br>
+                            <label>Venues</label>
+                            <select
+                                className="form-control"
+                                id="venueId"
+                                value={this.state.venueId}
+                                onChange={this.handleFieldChange}
+                            >
+                                {this.state.venues.map(venue => (
+                                    <option key={venue.name} value={venue.id}>
+                                        {venue.name}
+                                    </option>
+                                ))}
+                            </select>
+
+
+                            <br></br>
+                            <label htmlFor="date">Date</label>
+                            <br></br>
+                            <input
+                                type="date"
+                                required
+                                onChange={this.handleFieldChange}
+                                id="date"
+                                placeholder="Date"
+                            />
+                            <br></br>
+                        </div>
+                        <div className="alignRight">
+                            <br></br>
+                            <button
+                                type="button"
+                                disabled={this.state.loadingStatus}
+                                onClick={this.constructNewShow}
+                            >
+                                Submit
+              </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </>
+        );
+    }
+}
+
+export default ShowForm;
