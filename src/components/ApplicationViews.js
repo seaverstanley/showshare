@@ -11,7 +11,7 @@ import Register from './auth/Register'
 import Shows from './shows/Shows'
 import ShowCard from './shows/ShowCard'
 import NewShowCard from './shows/NewShowCard'
-import ShowDetail from './shows/ShowDetail'
+
 import ShowEditForm from './shows/ShowEditForm'
 
 
@@ -42,7 +42,7 @@ class ApplicationViews extends Component {
             return <LogOut />
         }}/>
            <Route exact path ="/shows" render={(props) =>{
-            return <Shows />
+            return <Shows {...props} />
         }}/>
         <Route
           path="/shows/:showId(\d+)/edit"
@@ -50,24 +50,6 @@ class ApplicationViews extends Component {
             return <ShowEditForm {...props} />;
           }}
         />
-                <Route
-          exact
-          path="/showDetails/:showId(\d+)"
-          render={props => {
-            // Pass the showId to the showDetailComponent
-            console.log("this is props", props);
-            return this.isAuthenticated() ? (
-              <ShowDetail
-                {...props}
-                showId={parseInt(props.match.params.showId)}
-              />
-            ) : (
-              <Redirect to="/login" />
-            );
-          }}
-        />
-
-
             <Route
           path="/NewShow"
           render={props => {

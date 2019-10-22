@@ -11,7 +11,21 @@ class ShowList extends Component {
     shows: []
   };
 
-  
+  deleteShowProp = (id) => {
+    ShowManager.delete(id)
+      .then(ShowManager.getAll)
+      .then(parsedShows => {
+          this.setState({
+              shows: parsedShows
+
+          })
+          })
+          .then(()=>
+        this.props.history.push("/shows")
+          )}
+
+
+
 
   componentDidMount() {
     console.log("SHOW LIST: ComponentDidMount");
@@ -34,8 +48,10 @@ class ShowList extends Component {
         </section>
         <div className="container-cards">
           {this.state.shows.map(singleShow => (
-            <ShowCard key={singleShow.id} showProp={singleShow} />
+            <ShowCard key={singleShow.id} deleteShowProp={this.deleteShowProp} showProp={singleShow} />
+
           ))}
+
         </div>
       </>
     );

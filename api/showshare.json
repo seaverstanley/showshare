@@ -47,34 +47,5 @@
       "venueId": 3
     }
   ],
-  "shows": [
-    {
-      "id": 7,
-      "name": "this was edited",
-      "date": "2019-10-15",
-      "actId": 1,
-      "venueId": 1
-    },
-    {
-      "name": "The First Actual Working Post!",
-      "date": "2019-10-21",
-      "actId": 3,
-      "venueId": 3,
-      "id": 8
-    },
-    {
-      "name": "Another Test To Make Sure It Works!",
-      "date": "2019-10-21",
-      "actId": 2,
-      "venueId": 2,
-      "id": 9
-    },
-    {
-      "name": "new show",
-      "date": "2019-10-22",
-      "actId": 2,
-      "venueId": 2,
-      "id": 10
-    }
-  ]
+  "shows": []
 }

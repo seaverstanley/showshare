@@ -26,10 +26,10 @@ export default {
     }).then(data => data.json());
   },
   delete(id) {
-    return fetch(`${remoteURL}/tasks/${id}`, {
+    return fetch(`${remoteURL}/shows/${id}`, {
       method: "DELETE"
     })
-    .then (()=> fetch(`${remoteURL}/tasks`))
+    .then (()=> fetch(`${remoteURL}/shows`))
     .then(result => result.json());
   },
 }

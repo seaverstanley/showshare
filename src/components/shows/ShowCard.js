@@ -24,9 +24,11 @@ class ShowCard extends Component {
                     <Link to={`/shows/${this.props.showProp.id}/edit`}>
                         <button className="btn btn-success">Edit</button>
                     </Link>
-                    <Link to={`/showDetails/${this.props.showProp.id}`}>
-                        <button className='btn btn-primary'>Details</button>
-                    </Link>
+                    <button type="checkbox" className ="btn btn-danger"
+            onClick={() => this.props.deleteShowProp(this.props.showProp.id)}
+          >
+            Delete Show?
+          </button>
 
 
                 </div>
