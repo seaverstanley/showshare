@@ -41,6 +41,7 @@
     {
       "name": "Routine Days",
       "genre": "Chill Rock",
+      "website": "https://routinedays.bandcamp.com",
       "id": 6,
       "actId": 6
     }
@@ -83,20 +84,5 @@
       "venueId": 6
     }
   ],
-  "shows": [
-    {
-      "name": "Corey Will Shred Your Face Off Show",
-      "date": "2019-10-25",
-      "actId": 5,
-      "venueId": 3,
-      "id": 2
-    },
-    {
-      "name": "Massing Does The Thing Again",
-      "date": "2019-10-26",
-      "actId": 1,
-      "venueId": 1,
-      "id": 3
-    }
-  ]
+  "shows": []
 }

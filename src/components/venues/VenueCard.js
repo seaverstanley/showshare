@@ -15,7 +15,7 @@ class VenueCard extends Component {
 
                     <h3 className="card-title">
                         {this.props.venueProp.name}</h3>
-                        <h4>{this.props.venueProp.address}</h4>
+                        <h5>{this.props.venueProp.address}</h5>
 
 
 
