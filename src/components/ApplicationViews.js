@@ -12,6 +12,8 @@ import Shows from './shows/Shows'
 import ShowCard from './shows/ShowCard'
 import NewShowCard from './shows/NewShowCard'
 
+import ShowEditForm from './shows/ShowEditForm'
+
 
 
 
@@ -40,8 +42,14 @@ class ApplicationViews extends Component {
             return <LogOut />
         }}/>
            <Route exact path ="/shows" render={(props) =>{
-            return <Shows />
+            return <Shows {...props} />
         }}/>
+        <Route
+          path="/shows/:showId(\d+)/edit"
+          render={props => {
+            return <ShowEditForm {...props} />;
+          }}
+        />
             <Route
           path="/NewShow"
           render={props => {
@@ -74,6 +82,7 @@ class ApplicationViews extends Component {
             return <Register/>
            }}/>
       </React.Fragment>
+
 
     )
   }

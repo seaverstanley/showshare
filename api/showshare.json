@@ -49,25 +49,11 @@
   ],
   "shows": [
     {
-      "name": "test 34",
-      "date": "2019-10-21",
+      "id": 1,
+      "name": "test 2",
+      "date": "2019-10-23",
       "actId": 2,
-      "venueId": 2,
-      "id": 7
-    },
-    {
-      "name": "The First Actual Working Post!",
-      "date": "2019-10-21",
-      "actId": 3,
-      "venueId": 3,
-      "id": 8
-    },
-    {
-      "name": "Another Test To Make Sure It Works!",
-      "date": "2019-10-21",
-      "actId": 2,
-      "venueId": 2,
-      "id": 9
+      "venueId": 2
     }
   ]
 }
