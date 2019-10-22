@@ -49,11 +49,11 @@
   ],
   "shows": [
     {
-      "name": "test 34",
-      "date": "2019-10-21",
-      "actId": 2,
-      "venueId": 2,
-      "id": 7
+      "id": 7,
+      "name": "this was edited",
+      "date": "2019-10-15",
+      "actId": 1,
+      "venueId": 1
     },
     {
       "name": "The First Actual Working Post!",
@@ -68,6 +68,13 @@
       "actId": 2,
       "venueId": 2,
       "id": 9
+    },
+    {
+      "name": "new show",
+      "date": "2019-10-22",
+      "actId": 2,
+      "venueId": 2,
+      "id": 10
     }
   ]
 }
