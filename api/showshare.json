@@ -47,5 +47,13 @@
       "venueId": 3
     }
   ],
-  "shows": []
+  "shows": [
+    {
+      "id": 1,
+      "name": "test 2",
+      "date": "2019-10-23",
+      "actId": 2,
+      "venueId": 2
+    }
+  ]
 }
