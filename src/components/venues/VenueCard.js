@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 
 
-class ActCard extends Component {
+class VenueCard extends Component {
 
 
 
@@ -14,9 +14,9 @@ class ActCard extends Component {
                 <div className="card-body">
 
                     <h3 className="card-title">
-                        {this.props.actProp.name}</h3>
-                        <h4>{this.props.actProp.genre}</h4>
-                   
+                        {this.props.venueProp.name}</h3>
+                        <h4>{this.props.venueProp.address}</h4>
+
 
 
                 </div>
@@ -29,4 +29,4 @@ class ActCard extends Component {
 }
 
 
-export default ActCard;
+export default VenueCard;

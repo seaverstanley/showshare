@@ -64,14 +64,14 @@ class ShowEditForm extends Component {
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <label htmlFor="showName">Show Name</label>
+                            <label htmlFor="showName">{this.state.showName}</label>
                             <br></br>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="showName"
-                                placeholder="show name"
+                                placeholder="showName"
 
                             />
                             <br></br>

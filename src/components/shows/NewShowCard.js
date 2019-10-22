@@ -76,13 +76,14 @@ class ShowForm extends Component {
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <label htmlFor="showName">Show Name</label>
+                            <label htmlFor="showName">{this.state.showName}</label>
                             <br></br>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="showName"
+                                value={this.state.showName}
                                 placeholder="show name"
 
                             />
@@ -129,6 +130,8 @@ class ShowForm extends Component {
                             <br></br>
                         </div>
                         <div className="alignRight">
+                            <br></br>
+
                             <br></br>
                             <button
                                 type="button"

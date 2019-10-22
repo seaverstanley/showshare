@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom";
 
-// Lgin Button on the Home Page to route to the Login Card
+// Login Button on the Home Page to route to the Login Card
 class Login extends Component {
     render() {
         return(

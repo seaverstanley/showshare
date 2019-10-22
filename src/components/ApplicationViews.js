@@ -11,6 +11,7 @@ import Register from './auth/Register'
 import Shows from './shows/Shows'
 import ShowCard from './shows/ShowCard'
 import NewShowCard from './shows/NewShowCard'
+import LocalActList from './localacts/LocalActs'
 
 import ShowEditForm from './shows/ShowEditForm'
 
@@ -43,6 +44,9 @@ class ApplicationViews extends Component {
         }}/>
            <Route exact path ="/shows" render={(props) =>{
             return <Shows {...props} />
+        }}/>
+        <Route exact path ="/localacts" render={(props) =>{
+            return <LocalActList {...props} />
         }}/>
         <Route
           path="/shows/:showId(\d+)/edit"

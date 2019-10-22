@@ -25,27 +25,78 @@
       "genre": "Prog Rock",
       "id": 3,
       "actId": 3
+    },
+    {
+      "name": "Niota",
+      "genre": "Math Rock",
+      "id": 4,
+      "actId": 4
+    },
+    {
+      "name": "Corey Zornes",
+      "genre": "Singer/Songwriter",
+      "id": 5,
+      "actId": 5
+    },
+    {
+      "name": "Routine Days",
+      "genre": "Chill Rock",
+      "id": 6,
+      "actId": 6
     }
   ],
   "venues": [
     {
       "name": "The V-Club",
-      "location": "",
+      "address": "741 6th Ave, Huntington, WV 25701",
       "id": 1,
       "venueId": 1
     },
     {
+      "name": "The Woods",
+      "address": " 1212 4th Ave, Huntington, WV 25701",
+      "id": 4,
+      "venueId": 4
+    },
+    {
+      "name": "The Marigold",
+      "address": "1325 4th Ave, Huntington, WV 25701",
+      "id": 5,
+      "venueId": 5
+    },
+    {
       "name": "The Boulevard Tavern",
-      "location": "",
+      "address": "806 Kanawha Blvd E, Charleston, WV 25301",
       "id": 2,
       "venueId": 2
     },
     {
       "name": "The Blue Parrot",
-      "location": "",
+      "address": "14 1/2 Capitol St, Charleston, WV 25301",
       "id": 3,
       "venueId": 3
+    },
+    {
+      "name": "The Empty Glass",
+      "address": "410 Elizabeth St, Charleston, WV 25311",
+      "id": 6,
+      "venueId": 6
     }
   ],
-  "shows": []
+  "shows": [
+    {
+      "name": "Corey Will Shred Your Face Off Show",
+      "date": "2019-10-25",
+      "actId": 5,
+      "venueId": 3,
+      "id": 2
+    },
+    {
+      "name": "Massing Does The Thing Again",
+      "date": "2019-10-26",
+      "actId": 1,
+      "venueId": 1,
+      "id": 3
+    }
+  ]
 }
