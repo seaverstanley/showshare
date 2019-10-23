@@ -7,43 +7,59 @@
       "id": 3
     }
   ],
+  "userShow":[
+
+
+    {
+      "id":1,
+      "userId":3,
+      "showId":1
+    }
+
+  ],
   "acts": [
     {
       "name": "Massing",
       "genre": "Pop/Rock",
       "id": 1,
-      "actId": 1
+      "actId": 1,
+      "image":"https://f4.bcbits.com/img/0015548229_10.jpg"
     },
     {
       "name": "Homesick",
       "genre": "Heavy Rock",
       "id": 2,
-      "actId": 2
+      "actId": 2,
+      "image":"https://f4.bcbits.com/img/a1139295703_2.jpg"
     },
     {
       "name": "Youth",
       "genre": "Prog Rock",
       "id": 3,
-      "actId": 3
+      "actId": 3,
+      "image":"https://f4.bcbits.com/img/a3067890547_10.jpg"
     },
     {
       "name": "Niota",
       "genre": "Math Rock",
       "id": 4,
-      "actId": 4
+      "actId": 4,
+      "image":"https://f4.bcbits.com/img/a0285095463_10.jpg"
     },
     {
       "name": "Corey Zornes",
       "genre": "Singer/Songwriter",
       "id": 5,
-      "actId": 5
+      "actId": 5,
+      "image":"https://pbs.twimg.com/profile_images/1149050186754383880/Xg90fir2_400x400.jpg"
     },
     {
       "name": "Routine Days",
       "genre": "Chill Rock",
       "website": "https://routinedays.bandcamp.com",
       "id": 6,
-      "actId": 6
+      "actId": 6,
+      "image":"https://f4.bcbits.com/img/a1307916998_2.jpg"
     }
   ],
   "venues": [

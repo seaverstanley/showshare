@@ -18,7 +18,8 @@ class ActCard extends Component {
                     <h3 className="card-title">
                         {this.props.actProp.name}</h3>
                         <h5>{this.props.actProp.genre}</h5>
-                      
+                        <p>{this.props.actProp.image}</p>
+
 
 
 
