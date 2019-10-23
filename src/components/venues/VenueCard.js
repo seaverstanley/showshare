@@ -15,6 +15,8 @@ class VenueCard extends Component {
 
                     <h3 className="card-title">
                         {this.props.venueProp.name}</h3>
+                        <p><span className="card-image"><img className="image" src={this.props.venueProp.image} alt="photo"></img></span></p>
+
                         <h5>{this.props.venueProp.address}</h5>
 
 

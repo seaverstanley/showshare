@@ -74,6 +74,7 @@ class ShowForm extends Component {
     render() {
         return (
             <>
+            <div className="container-cards">
               <div className="card">
                 <div className="card-body">
                 <form>
@@ -147,6 +148,7 @@ class ShowForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
                 </div>
                 </div>
             </>

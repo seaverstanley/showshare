@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import VenueManager from "../../modules/VenueManager";
 import ActManager from "../../modules/ActManager";
 import ShowManager from '../../modules/ShowManager'
+import '../ShowShare.css'
 
 class ShowEditForm extends Component {
     //set the initial state
@@ -61,6 +62,7 @@ class ShowEditForm extends Component {
     render() {
         return (
             <>
+            <div className="container-cards">
             <div className="card">
                 <div className="card-body">
                 <form>
@@ -131,6 +133,7 @@ class ShowEditForm extends Component {
                     </fieldset>
                 </form>
                 </div>
+                    </div>
                     </div>
 
             </>

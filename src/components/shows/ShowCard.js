@@ -28,7 +28,7 @@ class ShowCard extends Component {
                         <button className="btn btn-success">Edit</button>
                     </Link>
                     <Link to={`/shows/${this.props.showProp.id}`}>
-            <button>Details</button>
+            <button className="btn btn-primary">Details</button>
           </Link>
 
                     <button type="checkbox" className ="btn btn-danger"
@@ -40,7 +40,7 @@ class ShowCard extends Component {
                 </div>
 
                 <br></br>
-                <h5>Users Attending:{""}</h5>
+
             </div>
 
 
