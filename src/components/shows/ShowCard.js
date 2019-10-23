@@ -1,12 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import UserManager from '../../modules/UserManager'
 
 
 
 class ShowCard extends Component {
 
+state={
+count:0
+}
 
 
+likeIncrements= ()=>{
+    let newCount = this.state.count + 1
+    this.setState({
+      count: newCount
+    })
+    return newCount
+}
 
     render() {
         return (
@@ -29,10 +40,17 @@ class ShowCard extends Component {
           >
             Delete Show?
           </button>
+          <button className="btn btn-primary" onClick ={this.likeIncrements} >{this.state.count} Likes</button>
 
 
                 </div>
+
+                <br></br>
+                <h5>Users Attending:</h5>
             </div>
+
+
+
         );
     }
 

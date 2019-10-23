@@ -2,6 +2,10 @@ ol{
     list-style-type: none;
 }
 
+.url{
+    text-align: center;
+}
+
 h1, h3, h5{
     text-align: center;
 }

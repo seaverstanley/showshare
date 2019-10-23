@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ShowManager from "../../modules/ShowManager";
 import ActManager from '../../modules/ActManager'
 import VenueManager from '../../modules/VenueManager'
+import "./NewShowCard.css"
 import 'react-dropdown/style.css'
 
 
@@ -73,10 +74,12 @@ class ShowForm extends Component {
     render() {
         return (
             <>
+              <div className="card">
+                <div className="card-body">
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <label htmlFor="showName">{this.state.showName}</label>
+                            <label htmlFor="showName" className="card-title">{this.state.showName}</label>
                             <br></br>
                             <input
                                 type="text"
@@ -134,6 +137,7 @@ class ShowForm extends Component {
 
                             <br></br>
                             <button
+
                                 type="button"
                                 disabled={this.state.loadingStatus}
                                 onClick={this.constructNewShow}
@@ -143,6 +147,8 @@ class ShowForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
+                </div>
             </>
         );
     }

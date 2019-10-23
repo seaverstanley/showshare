@@ -2,7 +2,7 @@ import React from 'react'
 import { Component } from "react"
 
 
-class Logout extends Component{
+class clickLogout extends Component{
     logout() {
         localStorage.clear();
         window.location.href = '/';
@@ -11,10 +11,10 @@ class Logout extends Component{
     render(){
         return(
             <div>
-            
+
             </div>
         )
     }
 }
 
-export default Logout;
+export default clickLogout;

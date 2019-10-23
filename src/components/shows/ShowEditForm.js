@@ -61,6 +61,8 @@ class ShowEditForm extends Component {
     render() {
         return (
             <>
+            <div className="card">
+                <div className="card-body">
                 <form>
                     <fieldset>
                         <div className="formgrid">
@@ -128,6 +130,9 @@ class ShowEditForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
+                    </div>
+
             </>
         );
     }

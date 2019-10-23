@@ -5,8 +5,8 @@ class About extends Component {
   render() {
     return (
       <address>
-        This will be the About Page for ShowShare!
-        <br />Come To Huntington!
+        <h3>This will be the About Page for ShowShare!</h3>
+        <br /><h5>Come To Huntington!</h5>
       </address>
     )
   }

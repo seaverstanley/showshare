@@ -84,5 +84,13 @@
       "venueId": 6
     }
   ],
-  "shows": []
+  "shows": [
+    {
+      "name": "This Show is For Tests n Junk",
+      "date": "2019-10-25",
+      "actId": 4,
+      "venueId": 5,
+      "id": 1
+    }
+  ]
 }
