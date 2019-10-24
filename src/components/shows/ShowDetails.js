@@ -7,6 +7,11 @@ import '../ShowShare.css'
 
 class ShowDetails extends Component {
 
+    // here is the code for the attending button
+
+    userShowButton = () => {
+        console.log("this is the user show button");
+      }
     //set the initial state
     state = {
         showName: "",
@@ -18,6 +23,7 @@ class ShowDetails extends Component {
         attendingUsers: [],
         loadingStatus: false
     };
+
 
     componentDidMount() {
         console.log("ShowDetail: ComponentDidMount");
@@ -58,7 +64,9 @@ class ShowDetails extends Component {
             </h4>
                         <h4>{this.state.venueName}</h4>
                         <p>{this.state.date}</p>
-                        <button className="btn btn-primary">Attending?</button>
+                        <button onClick={this.userShowButton}>
+  Attending Button
+</button>
                         <p>Users Attending:
                             <br></br>
                             {this.state.attendingUsers.map(singleUserAttending => (
