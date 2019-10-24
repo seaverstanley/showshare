@@ -64,7 +64,7 @@ class ApplicationViews extends Component {
             return this.isAuthenticated() ? (
               <ShowDetails
                 {...props}
-                showId={parseInt(props.match.params.showId)}
+                // showId={parseInt(props.match.params.showId)}
               />
             ) : (
               <Redirect to="/login" />

@@ -5,6 +5,12 @@
       "password": "e",
       "email": "e@e.com",
       "id": 3
+    },
+    {
+      "name": "greg",
+      "password": "g",
+      "email": "g@g.com",
+      "id": 4
     }
   ],
   "userShows": [
@@ -12,6 +18,16 @@
       "id": 1,
       "userId": 3,
       "showId": 1
+    },
+    {
+      "id": 2,
+      "userId": 4,
+      "showId": 2
+    },
+    {
+      "id": 1,
+      "userId": 3,
+      "showId": 2
     }
   ],
   "acts": [

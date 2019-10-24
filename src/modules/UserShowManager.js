@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:5002"
 
 export default {
   getAttendingUsers(showId) {
-    return fetch(`http://localhost:5002/userShows/?showId=1&_expand=user`).then(result => result.json())
+    return fetch(`http://localhost:5002/userShows/?showId=${showId}&_expand=user`).then(result => result.json())
   },
   getAllUserNames() {
     return fetch(`${remoteURL}/users`).then(result => result.json())
@@ -17,13 +17,13 @@ export default {
     })
     .then(result => result.json())
   },
-  post(newUser) {
-    return fetch(`${remoteURL}/users`, {
+  post(newUserShow) {
+    return fetch(`${remoteURL}/userShows`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(newUser)
+        body: JSON.stringify(newUserShow)
     }).then(data => data.json())
 },
 update(editedUser) {
