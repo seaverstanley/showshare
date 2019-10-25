@@ -23,6 +23,7 @@ class ShowDetails extends Component {
     const userShow = {
       showId: this.props.match.params.showId,
       userId: localStorage.getItem("credentials")
+
     };
 
     // Create the show and redirect user back to individual show card
@@ -69,9 +70,13 @@ class ShowDetails extends Component {
       )
     ) {
       console.log("Users Going found inside the array.");
+      document.querySelector("#attendingButton").disabled = true;
     }
     else {
-        console.log("These are not the users going")
+        console.log("These are not the users going");
+        // document.querySelector("#attendingButton").disabled = false;
+
+
     }
     return (
       <div className="container-cards">
@@ -82,8 +87,8 @@ class ShowDetails extends Component {
             <h4>{this.state.actName} @</h4>
             <h4>{this.state.venueName}</h4>
             <p>{this.state.date}</p>
-            
-            <button onClick={this.constructNewUserShow}>
+
+            <button className="btn btn-primary" id="attendingButton" onClick={this.constructNewUserShow}>
               Attending Button
             </button>
             <p>

@@ -11,6 +11,12 @@
       "password": "g",
       "email": "g@g.com",
       "id": 4
+    },
+    {
+      "name": "jon",
+      "password": "j",
+      "email": "j@j.com",
+      "id": 5
     }
   ],
   "userShows": [
@@ -20,74 +26,14 @@
       "showId": 1
     },
     {
-      "id": 2,
-      "userId": 4,
-      "showId": 2
-    },
-    {
-      "id": 1,
-      "userId": 3,
-      "showId": 2
+      "showId": "2",
+      "userId": "5",
+      "id": 2
     },
     {
       "showId": "3",
-      "userId": "4",
+      "userId": "3",
       "id": 3
-    },
-    {
-      "showId": "1",
-      "userId": "4",
-      "id": 4
-    },
-    {
-      "showId": "1",
-      "userId": "4",
-      "id": 5
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 6
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 7
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 8
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 9
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 10
-    },
-    {
-      "showId": "1",
-      "userId": "4",
-      "id": 11
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 12
-    },
-    {
-      "showId": "2",
-      "userId": "4",
-      "id": 13
-    },
-    {
-      "showId": "3",
-      "userId": "4",
-      "id": 14
     }
   ],
   "acts": [
