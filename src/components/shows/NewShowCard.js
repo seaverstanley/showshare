@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ShowManager from "../../modules/ShowManager";
 import ActManager from '../../modules/ActManager'
 import VenueManager from '../../modules/VenueManager'
+import "./NewShowCard.css"
 import 'react-dropdown/style.css'
 
 
@@ -73,16 +74,20 @@ class ShowForm extends Component {
     render() {
         return (
             <>
+            <div className="container-cards">
+              <div className="card">
+                <div className="card-body">
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <label htmlFor="showName">Show Name</label>
+                            <label htmlFor="showName" className="card-title">{this.state.showName}</label>
                             <br></br>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="showName"
+                                value={this.state.showName}
                                 placeholder="show name"
 
                             />
@@ -130,7 +135,10 @@ class ShowForm extends Component {
                         </div>
                         <div className="alignRight">
                             <br></br>
+
+                            <br></br>
                             <button
+
                                 type="button"
                                 disabled={this.state.loadingStatus}
                                 onClick={this.constructNewShow}
@@ -140,6 +148,9 @@ class ShowForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
+                </div>
+                </div>
             </>
         );
     }

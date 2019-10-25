@@ -10,7 +10,9 @@ import RegisterCard from './auth/RegisterCard';
 import Register from './auth/Register'
 import Shows from './shows/Shows'
 import ShowCard from './shows/ShowCard'
+import ShowDetails from './shows/ShowDetails'
 import NewShowCard from './shows/NewShowCard'
+import LocalActs from "./localacts/LocalActs"
 
 import ShowEditForm from './shows/ShowEditForm'
 
@@ -44,12 +46,32 @@ class ApplicationViews extends Component {
            <Route exact path ="/shows" render={(props) =>{
             return <Shows {...props} />
         }}/>
+        <Route exact path ="/localacts" render={(props) =>{
+            return <LocalActs {...props} />
+        }}/>
         <Route
           path="/shows/:showId(\d+)/edit"
           render={props => {
             return <ShowEditForm {...props} />;
           }}
         />
+                <Route
+          exact
+          path="/shows/:showId(\d+)"
+          render={props => {
+            // Pass the showId to the showDetailComponent
+            console.log("this is props", props);
+            return this.isAuthenticated() ? (
+              <ShowDetails
+                {...props}
+                // showId={parseInt(props.match.params.showId)}
+              />
+            ) : (
+              <Redirect to="/login" />
+            );
+          }}
+        />
+
             <Route
           path="/NewShow"
           render={props => {

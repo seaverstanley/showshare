@@ -7,8 +7,8 @@ class Home extends Component {
   render() {
     return (
       <address>
-        This is the home page for ShowShare!
-        <br />Come To Huntington!
+       <h3> This is the home page for ShowShare!</h3>
+
         <br></br>
         </address>
     )

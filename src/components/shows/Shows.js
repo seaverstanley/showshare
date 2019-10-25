@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import ShowCard from './ShowCard'
 import ShowManager from '../../modules/ShowManager'
 
+
 class ShowList extends Component {
   //define what this component needs to render
   state = {
@@ -29,7 +30,7 @@ class ShowList extends Component {
 
   componentDidMount() {
     console.log("SHOW LIST: ComponentDidMount");
-    //getAll from AnimalManager and hang on to that data; put it in state
+    //getAll from ShowManager and hang on to that data; put it in state
     ShowManager.getAll().then(showsFromDatabase => {
       console.log(showsFromDatabase);
       this.setState({
@@ -48,7 +49,7 @@ class ShowList extends Component {
         </section>
         <div className="container-cards">
           {this.state.shows.map(singleShow => (
-            <ShowCard key={singleShow.id} deleteShowProp={this.deleteShowProp} showProp={singleShow} />
+            <ShowCard key={singleShow.id} deleteShowProp={this.deleteShowProp} showProp={singleShow} attendingShowProp={this.attendingShowProp} />
 
           ))}
 

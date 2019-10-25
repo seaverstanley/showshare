@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import VenueManager from "../../modules/VenueManager";
 import ActManager from "../../modules/ActManager";
 import ShowManager from '../../modules/ShowManager'
+import '../ShowShare.css'
 
 class ShowEditForm extends Component {
     //set the initial state
@@ -61,17 +62,20 @@ class ShowEditForm extends Component {
     render() {
         return (
             <>
+            <div className="container-cards">
+            <div className="card">
+                <div className="card-body">
                 <form>
                     <fieldset>
                         <div className="formgrid">
-                            <label htmlFor="showName">Show Name</label>
+                            <label htmlFor="showName">{this.state.showName}</label>
                             <br></br>
                             <input
                                 type="text"
                                 required
                                 onChange={this.handleFieldChange}
                                 id="showName"
-                                placeholder="show name"
+                                placeholder="showName"
 
                             />
                             <br></br>
@@ -128,6 +132,10 @@ class ShowEditForm extends Component {
                         </div>
                     </fieldset>
                 </form>
+                </div>
+                    </div>
+                    </div>
+
             </>
         );
     }

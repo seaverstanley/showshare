@@ -2,6 +2,18 @@ ol{
     list-style-type: none;
 }
 
-h1{
+.url{
     text-align: center;
 }
+
+h1, h3, h5{
+    text-align: center;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+

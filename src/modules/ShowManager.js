@@ -14,7 +14,7 @@ export default {
     return fetch(`http://localhost:5002/shows?_expand=venue&_expand=act`).then(result => result.json());
   },
   getOne(id) {
-    return fetch(`${remoteURL}/shows/${id}/`).then(result => result.json());
+    return fetch(`${remoteURL}/shows/${id}?_expand=venue&_expand=act`).then(result => result.json());
   },
   update(editedShow) {
     return fetch(`${remoteURL}/shows/${editedShow.id}`, {
